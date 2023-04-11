@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+  <title>Welcome Gowtham!!</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+      grid-template-rows: 1fr 6fr;
+      grid-template-areas: "header header" "sidebar main";
+      gap: 10px 10px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #f1f1f1;
+      padding: 10px;
+      font-size: 28px;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar {
+      grid-template-areas: "compose" "logout";
+      grid-area: sidebar;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    .emails {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 10px;
+    }
+
+    .email {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+    }
+
+    .compose {
+      height: 75px;
+      padding: 10px;
+      border: none;
+      background-color: #333;
+      width: 100%;
+      color: white;
+      font-size: 16px;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="header"> Hello Gowtham! You can view your emails here! </div>
+
+  <div class="sidebar">
+    <button class="compose">Compose</button>
+  </div>
+
+  <div class="main">
+    <div class="emails">
+      <button class="email">
+        <span class="from"><b>From:</b> Gowtham</span>
+        <span class="subject"><b>Subject:</b> Welcome to the site</span>
+        <span class="content">Hello! Hope this email finds you well, I wanted to let you know that ...</span>
+        <span class="date">2017-01-01</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+</body>
